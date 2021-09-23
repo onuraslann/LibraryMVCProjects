@@ -19,6 +19,7 @@ namespace LibraryMVCProjects.Controllers
         {
             return View("Yeni");
         }
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(BookTypes booktypes)
         {
             if (booktypes.Id == 0)

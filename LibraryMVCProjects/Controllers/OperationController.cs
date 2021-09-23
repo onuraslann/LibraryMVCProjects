@@ -25,6 +25,7 @@ namespace LibraryMVCProjects.Controllers
             };
             return View("Yeni", model);
         }
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Operations operations)
         {
             if (operations.Id == 0)

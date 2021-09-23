@@ -6,7 +6,7 @@
 
 @using (Html.BeginForm("Kaydet", "Writer", FormMethod.Post))
 {
-
+    @Html.AntiForgeryToken()
     <div class="form-group" style="font-size:large">
 
         @Html.LabelFor(m => m.WriterFirstName)
@@ -21,6 +21,6 @@
 
 
     </div>
-    @Html.HiddenFor(m=>m.Id)
+    @Html.HiddenFor(m => m.Id)
     <button type="submit" class="btn btn-success">Kaydet</button>
 }

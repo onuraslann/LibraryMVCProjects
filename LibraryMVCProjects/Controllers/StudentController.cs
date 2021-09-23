@@ -20,6 +20,7 @@ namespace LibraryMVCProjects.Controllers
             return View("Yeni");
 
         }
+        [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Students students)
         {
             if (students.Id == 0)
