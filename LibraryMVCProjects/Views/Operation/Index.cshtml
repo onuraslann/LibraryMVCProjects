@@ -1,0 +1,37 @@
+﻿@model List<LibraryMVCProjects.Models.EntityFramework.Operations>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<a class="btn btn-success" href="/Operation/Yeni">NewOperation</a>
+<table class="table" style="background-color:darkgray">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>BookName</th>
+            <th>StudentName</th>
+            <th>Price</th>
+            <th>EntryDate</th>
+            <th>ExpirationDate</th>
+             <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var operation in Model)
+        {
+        <tr>
+            <td>@operation.Id</td>
+            <td>@operation.Books.BookName</td>
+            <td>@operation.Students.FirstName</td>
+            <td>@operation.Price</td>
+            <td>@operation.EntryDate.Value.ToString("dd-MM-yyyy")</td>
+            <td>@operation.ExpirationDate.Value.ToString("dd-MM-yyyy")</td>
+
+            <td><a class="btn btn-primary" href="/Operation/Update/@operation.Id">Update</a></td>
+            <td><a class="btn btn-warning " href="/Operation/Delete/@operation.Id">Delete</a></td>
+
+        </tr>
+        }
+    </tbody>
