@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a794533345b473885c153d84c25d86f" Name="Diagram1">
+        <EntityTypeShape EntityType="LibraryBackendsModel.Books" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryBackendsModel.BookTypes" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryBackendsModel.Operations" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryBackendsModel.Students" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibraryBackendsModel.Writers" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="LibraryBackendsModel.FK_Books_BookTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryBackendsModel.FK_Books_Writers" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryBackendsModel.FK_Operations_Books1" ManuallyRouted="false" />
+        <AssociationConnector Association="LibraryBackendsModel.FK_Operations_Students1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
