@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <a class="btn btn-success" href="/Writer/Yeni">NewWriter</a> 
-<table class="table" style="background-color:darkgray">
+<table class="table" style="background-color:darkgray" id="tblWriters">
     <thead>
         <tr>
             <th>Id</th>
@@ -22,7 +22,7 @@
             <td>@writer.WriterFirstName</td>
             <td>@writer.WriterLastName</td>
             <td><a class="btn btn-primary" href="/Writer/Update/@writer.Id">Update</a></td>
-            <td><a class="btn btn-warning " href="/Writer/Delete/@writer.Id">Delete</a></td>
+            <td><a class="btn btn-warning btnWriterDelete" data-id="@writer.Id">Delete</a></td>
 
         </tr>
         }

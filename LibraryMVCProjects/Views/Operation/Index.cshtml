@@ -5,7 +5,7 @@
 }
 
 <a class="btn btn-success" href="/Operation/Yeni">NewOperation</a>
-<table class="table" style="background-color:darkgray">
+<table class="table" style="background-color:darkgray" id="tblOperations">
     <thead>
         <tr>
             <th>Id</th>
@@ -30,7 +30,7 @@
             <td>@operation.ExpirationDate.Value.ToString("dd-MM-yyyy")</td>
 
             <td><a class="btn btn-primary" href="/Operation/Update/@operation.Id">Update</a></td>
-            <td><a class="btn btn-warning " href="/Operation/Delete/@operation.Id">Delete</a></td>
+            <td><a class="btn btn-warning btnOperationDelete" data-id="@operation.Id">Delete</a></td>
 
         </tr>
         }
