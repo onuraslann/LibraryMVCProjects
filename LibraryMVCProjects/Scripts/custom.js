@@ -1,5 +1,5 @@
 ﻿$(function () {
-
+    $("#tblBookTypes").DataTable();
     $("#tblBookTypes").on("click", ".btnBookTypeDelete", function () {
         var btn = $(this);
         bootbox.confirm("Markayı silmek istediğinize eminmisiniz ? ", function (result) {
@@ -23,7 +23,7 @@
     });
 })
 $(function () {
-
+    $("#tblOperations").DataTable();
     $("#tblOperations").on("click", ".btnOperationDelete", function () {
         var btn = $(this);
         bootbox.confirm("Markayı silmek istediğinize eminmisiniz ? ", function (result) {
@@ -47,7 +47,7 @@ $(function () {
     });
 })
 $(function () {
-
+    $("#tblStudent").DataTable()
     $("#tblStudent").on("click", ".btnStudentDelete", function () {
         var btn = $(this);
         bootbox.confirm("Markayı silmek istediğinize eminmisiniz ? ", function (result) {
@@ -71,7 +71,7 @@ $(function () {
     });
 })
 $(function () {
-
+    $("#tblWriters").dataTable()
     $("#tblWriters").on("click", ".btnWriterDelete", function () {
         var btn = $(this);
         bootbox.confirm("Markayı silmek istediğinize eminmisiniz ? ", function (result) {
