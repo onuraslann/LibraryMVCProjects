@@ -17,12 +17,16 @@ namespace LibraryMVCProjects.Controllers
         }
         public ActionResult Yeni()
         {
-            return View("Yeni");
+            return View("Yeni",new Students());
 
         }
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Students students)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Yeni");
+            }
             if (students.Id == 0)
             {
                 db.Students.Add(students);

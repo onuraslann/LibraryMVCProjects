@@ -21,13 +21,25 @@ namespace LibraryMVCProjects.Controllers
             var model = new OperationViewModels()
             {
                  Books=db.Books.ToList(),
-                 Students=db.Students.ToList()
+                 Students=db.Students.ToList(),
+                 Operations=new Operations()
+                 
             };
             return View("Yeni", model);
         }
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Operations operations)
         {
+            if (!ModelState.IsValid)
+            {
+                var model = new OperationViewModels()
+                {
+                    Books = db.Books.ToList(),
+                    Students = db.Students.ToList(),
+                    Operations=operations
+                };
+                return View("Yeni", model);
+            }
             if (operations.Id == 0)
             {
                 db.Operations.Add(operations);

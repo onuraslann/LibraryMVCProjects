@@ -11,16 +11,19 @@
 
         @Html.LabelFor(m => m.Age)
         @Html.TextBoxFor(m => m.Age)
+        @Html.ValidationMessageFor(m=>m.Age)
     </div>
     <div class="form-group" style="font-style:oblique">
 
         @Html.LabelFor(m => m.FirstName)
         @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
     </div>
     <div class="form-group" style="font-style:oblique">
 
         @Html.LabelFor(m => m.LastName)
         @Html.TextBoxFor(m => m.LastName)
+        @Html.ValidationMessageFor(m => m.LastName)
     </div>
     @Html.HiddenFor(m => m.Id)
     <button type="submit" class="btn btn-success">Kaydet</button>

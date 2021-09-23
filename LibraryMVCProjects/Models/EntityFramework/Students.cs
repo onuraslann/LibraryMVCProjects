@@ -11,7 +11,8 @@ namespace LibraryMVCProjects.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Students
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,8 +22,12 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
+        [Required(ErrorMessage ="Age boþ geçilemez")]
+        [Range(7,18)]
         public Nullable<int> Age { get; set; }
+        [Required(ErrorMessage = "FirstName boþ geçilemez")]
         public string FirstName { get; set; }
+        [Required(ErrorMessage = "LastName boþ geçilemez")]
         public string LastName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

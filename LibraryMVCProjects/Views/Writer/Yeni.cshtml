@@ -11,6 +11,7 @@
 
         @Html.LabelFor(m => m.WriterFirstName)
         @Html.TextBoxFor(m => m.WriterFirstName)
+        @Html.ValidationMessageFor(m=>m.WriterFirstName)
 
 
     </div>
@@ -18,7 +19,7 @@
 
         @Html.LabelFor(m => m.WriterLastName)
         @Html.TextBoxFor(m => m.WriterLastName)
-
+        @Html.ValidationMessageFor(m => m.WriterLastName)
 
     </div>
     @Html.HiddenFor(m => m.Id)

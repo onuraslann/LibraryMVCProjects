@@ -17,11 +17,15 @@ namespace LibraryMVCProjects.Controllers
         }
         public ActionResult Yeni()
         {
-            return View("Yeni");
+            return View("Yeni",new Writers());
         }
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(Writers writers)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Yeni");
+            }
             if (writers.Id == 0)
             {
                 db.Writers.Add(writers);

@@ -17,11 +17,15 @@ namespace LibraryMVCProjects.Controllers
         }
         public ActionResult Yeni()
         {
-            return View("Yeni");
+            return View("Yeni",new BookTypes());
         }
         [ValidateAntiForgeryToken]
         public ActionResult Kaydet(BookTypes booktypes)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Yeni");
+            }
             if (booktypes.Id == 0)
             {
                 db.BookTypes.Add(booktypes);

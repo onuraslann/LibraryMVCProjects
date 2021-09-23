@@ -11,7 +11,8 @@ namespace LibraryMVCProjects.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Writers
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,7 +22,9 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
+        [Required(ErrorMessage = "WriterFirstName boþ geçilemez")]
         public string WriterFirstName { get; set; }
+        [Required(ErrorMessage = "WriterLastName boþ geçilemez")]
         public string WriterLastName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

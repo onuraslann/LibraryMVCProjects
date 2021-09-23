@@ -11,7 +11,8 @@ namespace LibraryMVCProjects.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class BookTypes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
+        [Display(Name ="TypeName")]
+        [Required(ErrorMessage ="TypeName Boþ geçilemez")]
         public string Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
