@@ -12,13 +12,19 @@
 
         @Html.LabelFor(m => m.Type)
         @Html.TextBoxFor(m => m.Type)
-      @Html.ValidationMessageFor(m=>m.Type)
+        @Html.ValidationMessageFor(m => m.Type)
 
 
     </div>
-   
+
     @Html.HiddenFor(m => m.Id)
     <button type="submit" class="btn btn-success">Kaydet</button>
 }
 
 
+@section Scripts{
+
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

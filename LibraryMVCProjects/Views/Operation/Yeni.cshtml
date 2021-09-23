@@ -11,7 +11,7 @@
 
         @Html.LabelFor(m => m.Operations.BookId)
         @Html.DropDownListFor(m => m.Operations.BookId, new SelectList(Model.Books, "Id", "BookName"))
-        @Html.ValidationMessageFor(m=>m.Operations.BookId)
+        @Html.ValidationMessageFor(m => m.Operations.BookId)
 
     </div>
     <div class="form-group" style="font-style:oblique">
@@ -39,3 +39,9 @@
 
 }
 
+@section Scripts{
+
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
