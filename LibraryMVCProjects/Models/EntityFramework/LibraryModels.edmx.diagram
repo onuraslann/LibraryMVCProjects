@@ -14,6 +14,7 @@
         <AssociationConnector Association="LibraryBackendsModel.FK_Books_Writers" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryBackendsModel.FK_Operations_Books1" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryBackendsModel.FK_Operations_Students1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LibraryBackendsModel.Userss" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

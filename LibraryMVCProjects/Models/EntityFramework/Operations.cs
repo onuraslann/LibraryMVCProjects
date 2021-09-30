@@ -17,12 +17,11 @@ namespace LibraryMVCProjects.Models.EntityFramework
     {
         public int Id { get; set; }
         [Display(Name ="StudentName")]
-        [Required(ErrorMessage = "StudentName boþ geçilemez")]
+        [Required(ErrorMessage ="StudentName boþ geçilemez")]
         public Nullable<int> StudentId { get; set; }
         [Display(Name = "BookName")]
         [Required(ErrorMessage = "BookName boþ geçilemez")]
         public Nullable<int> BookId { get; set; }
-        [Display(Name = "BookName")]
         [Required(ErrorMessage = "Price boþ geçilemez")]
         public Nullable<int> Price { get; set; }
         public Nullable<System.DateTime> EntryDate { get; set; }

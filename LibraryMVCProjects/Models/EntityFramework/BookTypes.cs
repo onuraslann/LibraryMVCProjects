@@ -22,8 +22,7 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
-        [Display(Name ="TypeName")]
-        [Required(ErrorMessage ="TypeName Boþ geçilemez")]
+        [Required(ErrorMessage = "Type boþ geçilemez")]
         public string Type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

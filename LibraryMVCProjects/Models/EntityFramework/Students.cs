@@ -22,8 +22,7 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
-        [Required(ErrorMessage ="Age boþ geçilemez")]
-        [Range(7,18)]
+        [Required(ErrorMessage = "Age boþ geçilemez")]
         public Nullable<int> Age { get; set; }
         [Required(ErrorMessage = "FirstName boþ geçilemez")]
         public string FirstName { get; set; }

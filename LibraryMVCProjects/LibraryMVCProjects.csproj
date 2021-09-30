@@ -379,6 +379,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookTypeController.cs" />
     <Compile Include="Controllers\OperationController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -413,10 +414,14 @@
     <Compile Include="Models\EntityFramework\Students.cs">
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityFramework\Userss.cs">
+      <DependentUpon>LibraryModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\EntityFramework\Writers.cs">
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BookViewModels.cs" />
     <Compile Include="ViewModels\OperationViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -435,6 +440,8 @@
     <Content Include="Views\Student\Yeni.cshtml" />
     <Content Include="Views\Operation\Index.cshtml" />
     <Content Include="Views\Operation\Yeni.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\Yeni.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

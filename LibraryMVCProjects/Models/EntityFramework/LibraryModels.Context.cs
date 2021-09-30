@@ -30,5 +30,6 @@ namespace LibraryMVCProjects.Models.EntityFramework
         public virtual DbSet<Operations> Operations { get; set; }
         public virtual DbSet<Students> Students { get; set; }
         public virtual DbSet<Writers> Writers { get; set; }
+        public virtual DbSet<Userss> Userss { get; set; }
     }
 }

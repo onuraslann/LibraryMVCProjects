@@ -11,7 +11,8 @@ namespace LibraryMVCProjects.Models.EntityFramework
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Books
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,9 +22,16 @@ namespace LibraryMVCProjects.Models.EntityFramework
         }
     
         public int Id { get; set; }
+        [Display(Name ="WriterName")]
+        [Required(ErrorMessage ="WriterName boþ geçilemez")]
         public Nullable<int> WriterId { get; set; }
+        [Display(Name = "TypeName")]
+        [Required(ErrorMessage = "TypeName boþ geçilemez")]
         public Nullable<int> BookTypeId { get; set; }
+        [Required(ErrorMessage = "Page boþ geçilemez")]
+        [Range(0,2000)]
         public Nullable<int> Page { get; set; }
+        [Required(ErrorMessage = "BookName boþ geçilemez")]
         public string BookName { get; set; }
     
         public virtual BookTypes BookTypes { get; set; }

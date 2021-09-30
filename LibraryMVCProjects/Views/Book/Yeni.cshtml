@@ -1,0 +1,30 @@
+﻿@model LibraryMVCProjects.ViewModels.BookViewModels
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Kaydet", "Book", FormMethod.Post))
+{
+
+    <div class="form-group" style="font-style:italic">
+        @Html.LabelFor(m => m.Books.WriterId)
+        @Html.DropDownListFor(m => m.Books.WriterId, new SelectList(Model.Writers, "Id", "WriterFirstName"))
+    </div>
+
+    <div class="form-group" style="font-style:italic">
+        @Html.LabelFor(m => m.Books.BookTypeId)
+        @Html.DropDownListFor(m => m.Books.BookTypeId, new SelectList(Model.BookTypes, "Id", "Type"))
+    </div>
+    <div class="form-group"style="font-style:italic">
+        @Html.LabelFor(m => m.Books.Page)
+        @Html.TextBoxFor(m => m.Books.Page)
+    </div>
+    <div class="form-group"style="font-style:italic">
+        @Html.LabelFor(m => m.Books.BookName)
+        @Html.TextBoxFor(m => m.Books.BookName)
+    </div>
+    @Html.HiddenFor(m=>m.Books.Id)
+<button type="submit" class="btn btn-success">Kaydet</button>
+}
+

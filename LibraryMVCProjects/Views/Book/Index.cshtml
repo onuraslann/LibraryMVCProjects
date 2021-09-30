@@ -1,0 +1,34 @@
+﻿@model List<LibraryMVCProjects.Models.EntityFramework.Books>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a class="btn btn-success" href="/Book/Yeni">NewBook</a>
+<table class="table table-bordered" style="background-color:darkgrey">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>WriterName</th>
+            <th>BookTypeName</th>
+            <th>Page</th>
+            <th>BookName</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+        <tr>
+            <td>@book.Id</td>
+            <td>@book.Writers.WriterFirstName</td>
+            <td>@book.BookTypes.Type</td>
+            <td>@book.Page</td>
+            <td>@book.BookName</td>
+            <td><a class="btn btn-primary" href="/Book/Update/@book.Id">Update</a></td>
+            <td><a class="btn btn-warning " href="/Book/Delete/@book.Id">Delete</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
