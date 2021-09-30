@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace LibraryMVCProjects.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OperationController : Controller
     {
         LibraryBackendsEntities db = new LibraryBackendsEntities();

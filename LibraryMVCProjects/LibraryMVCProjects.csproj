@@ -423,6 +423,7 @@
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\LibraryRoleProvider.cs" />
     <Compile Include="ViewModels\BookViewModels.cs" />
     <Compile Include="ViewModels\OperationViewModels.cs" />
   </ItemGroup>
@@ -459,7 +460,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

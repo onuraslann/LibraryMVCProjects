@@ -11,10 +11,12 @@ namespace LibraryMVCProjects.Controllers
     public class SecurityController : Controller
     {
         LibraryBackendsEntities db = new LibraryBackendsEntities();
+        [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Login(Userss userss)
         {
@@ -31,6 +33,11 @@ namespace LibraryMVCProjects.Controllers
                 return View();
             }
             
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login");
         }
 
     }
