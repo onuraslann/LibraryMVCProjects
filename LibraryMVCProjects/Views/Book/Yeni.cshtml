@@ -10,21 +10,31 @@
     <div class="form-group" style="font-style:italic">
         @Html.LabelFor(m => m.Books.WriterId)
         @Html.DropDownListFor(m => m.Books.WriterId, new SelectList(Model.Writers, "Id", "WriterFirstName"))
+        @Html.ValidationMessageFor(m => m.Books.WriterId)
     </div>
 
     <div class="form-group" style="font-style:italic">
         @Html.LabelFor(m => m.Books.BookTypeId)
         @Html.DropDownListFor(m => m.Books.BookTypeId, new SelectList(Model.BookTypes, "Id", "Type"))
+        @Html.ValidationMessageFor(m => m.Books.BookTypeId)
     </div>
-    <div class="form-group"style="font-style:italic">
+    <div class="form-group" style="font-style:italic">
         @Html.LabelFor(m => m.Books.Page)
         @Html.TextBoxFor(m => m.Books.Page)
+        @Html.ValidationMessageFor(m => m.Books.Page)
     </div>
-    <div class="form-group"style="font-style:italic">
+    <div class="form-group" style="font-style:italic">
         @Html.LabelFor(m => m.Books.BookName)
         @Html.TextBoxFor(m => m.Books.BookName)
+        @Html.ValidationMessageFor(m => m.Books.BookName)
     </div>
-    @Html.HiddenFor(m=>m.Books.Id)
-<button type="submit" class="btn btn-success">Kaydet</button>
+    @Html.HiddenFor(m => m.Books.Id)
+    <button type="submit" class="btn btn-success">Kaydet</button>
 }
 
+@section Scripts{
+
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}

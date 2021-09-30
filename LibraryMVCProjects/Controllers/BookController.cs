@@ -16,18 +16,33 @@ namespace LibraryMVCProjects.Controllers
             var model = db.Books.ToList();
             return View(model);
         }
+    
         public ActionResult Yeni()
         {
             var model = new BookViewModels() { 
             
                  BookTypes=db.BookTypes.ToList(),
-                 Writers=db.Writers.ToList()
+                 Writers=db.Writers.ToList(),
+                  Books=new Books()
 
             };
             return View("Yeni", model);
         }
         public ActionResult Kaydet(Books books)
         {
+            if (!ModelState.IsValid)
+            {
+                var model = new BookViewModels()
+                {
+
+                    BookTypes = db.BookTypes.ToList(),
+                    Writers = db.Writers.ToList(),
+                     Books=books
+
+                };
+                return View("Yeni", model);
+
+            }
             if (books.Id == 0)
             {
                 db.Books.Add(books);
